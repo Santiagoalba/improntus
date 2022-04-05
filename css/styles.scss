@@ -1,0 +1,381 @@
+$main-color: #f7f8f9;
+$dark-blue: #223c52;
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif
+}
+
+header{
+    width: 100%;
+    display: flex;
+    // align-items: center;
+    flex-direction: column;
+
+    .header-top{
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 20px 0;
+
+        .logo-container{
+
+            img{
+                width: 80%
+            }
+        }
+
+        .header-top-right{
+            display: flex;
+            align-items: center;
+
+            .form-outer{
+                max-width: 300px;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                    .container {
+                        width: 90%;
+                        max-width: 1160px;
+                        margin: auto;
+                    }
+
+                    form{
+
+                        
+                        .form-input{
+                            margin: 10px auto;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            
+                            input{
+                                padding: 5px 50px 5px 10px;
+                                border: none;
+                                background-color: $main-color;
+                                display: block;
+                                width: 100%;
+                                color: #adadad;
+                            }
+                        }
+        
+                        img{
+                            position: absolute;
+                            right: 15px;
+                            top: 0;
+                            width: 15px;
+                            height: 90%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+
+                
+            }
+          
+
+            .image-container{
+                width: 15px;
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            .search-mobile{
+                display: none;
+            }
+        }
+    }
+
+    .header-bottom{
+        width: 100%;
+        background-color: $main-color;
+        
+        .categories-list{
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            list-style: none;
+            padding: 0;
+            color:  $dark-blue;
+            
+            li{
+                margin-right: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                font-weight: 600;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+.swiper{
+    margin-top: 20px;
+    height: 500px;
+    
+    .swiper-wrapper{
+        
+        .swiper-slide{
+            background-color: $main-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 50px;
+                height: 50px;
+            }
+        }
+        
+    }
+    .swiper-button-prev {
+        color: black;
+        margin-left: 20px;
+    }
+
+    .swiper-button-next{
+        color: black;
+        margin-right: 20px;
+    }
+
+    .swiper-pagination{
+        margin-bottom: 10px;
+
+        .swiper-pagination-bullet{
+            height: 15px;
+            width: 15px;
+            color: #adadad;
+        }
+    }
+}
+
+
+
+
+.hot-sellers{
+    margin-bottom: 80px;
+     
+    .hot-sellers-container{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+
+}
+
+footer{
+    width: 100%;
+    background-color: $main-color;
+    display: flex;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    
+    .footer-container{
+        display: flex;
+        margin: 0 auto;
+        width: 40%;
+        justify-content: space-between;
+
+        .footer-column{
+
+            display: flex;
+            flex-direction: column;
+
+            .image-container{
+                display: none;
+            }
+
+            p{
+                margin: 0;
+                font-size: 26px;
+            }
+
+            ul{
+                list-style: none;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+
+                li{
+                    line-height: 1.5;
+                    color: #adadad;
+                }
+            }
+        }
+    }
+}
+
+
+// CATEGORY PRODUCTS ----------------------------------------------------------------
+
+.products{
+    width: 45%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+
+    h1{
+        margin: 40px 0;
+        color: $dark-blue;
+        font-size: 26px;
+    }
+
+    .products-cards-section{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+        .product-card{
+
+            max-width: 200px;
+            min-width: 150px;
+            
+            .product-image {
+                background-color: $main-color;
+                height: 250px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .heart-container {
+                    width: 14px;
+                    position: absolute;
+                    right: 5px;
+                    top: 5px;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                .image-container {
+                   
+                }
+            }
+
+            .product-info {
+                margin: 0;
+                color: $dark-blue;
+                padding-top: 10px;
+
+                p {
+                    margin: 0;
+                    margin-bottom: 5px;
+                    font-size: 17px;
+                }
+
+            }
+
+            .add-to-cart-button {
+                width: 100%;
+                background-color: $dark-blue;
+                color: #adadad;
+                border: none;
+                font-size: 14px;
+                padding: 8px 0;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    header {
+
+        padding: 20px 0;
+
+        .header-top{
+            width: 100%;
+
+            .logo-container{
+                margin-left: 10px;
+            }
+
+            .header-top-right{
+                margin-left: auto;
+                margin-right: 20px;
+
+                .form-outer{
+                    display: none;
+                }
+
+                .image-container{
+                   
+                }
+
+                .search-mobile{
+                    display: block;
+                    width: 15px;
+                }
+            }
+
+        }
+
+        .header-bottom{
+            display: none;
+        }
+    }
+
+    .swiper {
+        margin-top: 0;
+    }
+
+   
+
+    .footer {
+        padding: 20px 0;
+
+        .footer-container{
+            flex-direction: column;
+            width: 100%;
+            
+            .footer-column{
+                margin: 0 15px;
+                padding: 12px 20px;
+                border-bottom: 1px solid #adadad;
+                flex-direction: row;
+                justify-content: space-between;
+                
+                .image-container{
+                    display: block;
+                    width: 25px;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                ul{
+                    display: none;
+                }
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .products {
+
+        .products-cards-section{
+            grid-template-columns: repeat(2, 1fr);
+
+            .not-mobile{
+                display: none;
+            }
+        }
+    }
+}
