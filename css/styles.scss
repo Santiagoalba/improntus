@@ -3,7 +3,8 @@ $dark-blue: #223c52;
 
 body{
     margin: 0;
-    font-family: 'Roboto', sans-serif
+    font-family: 'Roboto', sans-serif;
+    color: $dark-blue;
 }
 
 header{
@@ -20,9 +21,13 @@ header{
         padding: 20px 0;
 
         .logo-container{
+            width: 30%;
+            display: flex;
+            align-items: center;
 
             img{
-                width: 80%
+                width: 100%;
+                max-width: 150px;
             }
         }
 
@@ -30,57 +35,30 @@ header{
             display: flex;
             align-items: center;
 
-            .form-outer{
-                max-width: 300px;
-                margin: auto;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                
-                    .container {
-                        width: 90%;
-                        max-width: 1160px;
-                        margin: auto;
-                    }
+            .input-container{
+                width: 300px;
+                position: relative;
 
-                    form{
+                img{
+                    position: absolute;
+                    top: 10px;
+                    right: 0px;
+                    width: 20px;
+                }
 
-                        
-                        .form-input{
-                            margin: 10px auto;
-                            position: relative;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            
-                            input{
-                                padding: 5px 50px 5px 10px;
-                                border: none;
-                                background-color: $main-color;
-                                display: block;
-                                width: 100%;
-                                color: #adadad;
-                            }
-                        }
-        
-                        img{
-                            position: absolute;
-                            right: 15px;
-                            top: 0;
-                            width: 15px;
-                            height: 90%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                        }
-                    }
-
-                
+                input{
+                    width: 100%;
+                    padding: 10px;
+                    background-color: $main-color;
+                    color: #adadad;
+                    border: none;
+                }
             }
           
 
             .image-container{
                 width: 15px;
+                margin-left: 30px;
 
                 img{
                     width: 100%;
@@ -165,8 +143,6 @@ header{
     margin-bottom: 80px;
      
     .hot-sellers-container{
-        width: 80%;
-        margin: 0 auto;
     }
 
     h1{
@@ -175,9 +151,10 @@ header{
     }
 
     .mySwiper{
-        height: 300px;
-        padding: 0 50px;
+        height: 400px;
+        padding: 0 30px;
         padding-bottom: 50px;
+        max-width: 1500px;
         
         .swiper-wrapper{
             
@@ -198,14 +175,81 @@ header{
 
                 &-info{
                     width: 100%;
+                    color: $dark-blue;
                 }
             }
+        }
+
+        .swiper-button-next, .swiper-button-prev{
+            top: 40%;
+        }
+
+        .swiper-button-next{
+           right: 0;
+        }
+
+        .swiper-button-prev{
+           left: 0;
         }
 
         .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
             bottom: -10px;
         }
     }
+
+
+    // ------------------ ESTILOS DE CARRUSEL HECHO A MANO -----------------------
+
+    .carousel {
+        width: 100%;
+        position: relative;
+        height: 400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1500px;
+    
+        .carousel-slide {
+            width: 100%;
+            max-width: 250px;
+            // margin: 0 30px;
+            padding: 20px 30px;
+    
+            .carousel-slide-img {
+                height: 100%;
+                background-color: gray;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .carousel-arrow {
+            width: 30px;
+    
+            img {
+                width: 100%;
+            }
+        }
+        
+        
+        .carousel-arrow-right {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: rotate(180deg);
+        }
+        
+        .carousel-arrow-left {
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+    }
+
+    // --------------------- FIN ESTILOS CARRUSEL A  MANO ---------------------------
+    
+    
+    
 
     
 
@@ -421,6 +465,7 @@ footer{
         margin-top: 5rem;
         margin-bottom: 7rem;
         background-color: $main-color;
+        width: 100%;
         
         p{
             width: 50%;
@@ -430,47 +475,122 @@ footer{
     }
 }
 
+@media screen and (max-width: 1250px) {
+    .products {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 3rem;
+
+        h1{
+            display: none;
+        }
+
+        .products-cards-section{
+            grid-template-columns: repeat(2, 1fr);
+
+            .not-mobile {
+                display: none;
+            }
+        }
+    }
+
+    .hot-sellers{
+
+
+        .mySwiper {
+            padding:0;
+            padding-bottom: 50px;
+        }
+
+        .carousel {
+            justify-content: center;
+
+            .not-mobile{
+                display: none;
+            }
+            
+        
+            .carousel-slide {
+                
+        
+                .carousel-slide-img {
+                   
+                }
+            }
+            .carousel-arrow {
+      
+        
+                img {
+            
+                }
+            }
+            
+            
+            .carousel-arrow-right {
+            
+            }
+            
+            .carousel-arrow-left {
+              
+            }
+        }
+    }
+
+    .product{
+        width: 80%;
+    }
+
+}
+
 @media screen and (max-width: 770px) {
 
     header {
 
         padding: 15px 0;
 
-        .header-top{
+        .header-top {
             width: 100%;
 
-            .logo-container{
-                margin-left: 10px;
+            .logo-container {
+                margin-left: 15px;
+
             }
 
-            .header-top-right{
+            .header-top-right {
                 margin-left: auto;
-                margin-right: 20px;
-                width: 100%;
+                margin-right: 40px;
+                // width: 100%;
 
-                .mobile-header-right{
-                    width: 100%;
+                .input-container {
+                    display: none;
+                }
+
+                .shopping-cart {
+                    width: 30px;
+                    margin-left: 0;
+                }
+
+                .mobile-header-right {
+                    // width: 100%;
                     display: flex;
                     justify-content: flex-end;
 
-                    .image-container{
-                        width: 25px;
+                    .image-container {
+                        width: 30px;
+                        margin-right: 10px;
                     }
                     
-                    .search-mobile{
+                    .search-mobile {
                         display: block;
                         margin-right: 20px;
 
-                        img{
+                        img {
                             display: block;
                         }
                     }
                 }
-
-                .form-outer{
-                    display: none;
-                }
-
 
             }
 
@@ -487,9 +607,11 @@ footer{
         .product-container{
             width: 100%;
             flex-direction: column;
+            margin-top: 1rem;
 
             .image-container{
                 width: 100%;
+                height: 350px;
             }
 
             .product-right{
@@ -498,7 +620,12 @@ footer{
 
                 .product-info{
                     padding: 0 20px;
-                    padding-top: 10px;
+                    padding-top: 20px;
+
+                    .other-info{
+                        margin-top: 1rem;
+                        padding-bottom: 10px;
+                    }
                 }
 
                 .product-quantity{
@@ -513,6 +640,8 @@ footer{
 
         .information{
             padding: 10px;
+            width: 90%;
+            margin: 20px auto;
 
             p{
                 width: 100%;
@@ -521,13 +650,42 @@ footer{
         }
     }
 
+    .products {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin-top: 3rem;
+        margin: 20px auto;
+        
+        h1{
+            display: none;
+        }
+        
+        .products-cards-section{
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0 20px;
+            width: 100%;
+            
+            
+
+            .product-card{
+                width: 100%;
+                max-width: none;
+                min-width: 0;
+            }
+
+            .not-mobile {
+                display: none;
+            }
+        }
+    }
+
     .swiper {
         margin-top: 0;
         max-height: 400px;
     }
-
    
-
     .footer {
         padding: 20px 0;
 
@@ -558,31 +716,4 @@ footer{
         }
         
     }
-}
-
-@media screen and (max-width: 1250px) {
-    .products {
-
-        .products-cards-section{
-            grid-template-columns: repeat(2, 1fr);
-
-            .not-mobile {
-                display: none;
-            }
-        }
-    }
-
-    .hot-sellers{
-
-
-        .mySwiper {
-            padding:0;
-            padding-bottom: 50px;
-        }
-    }
-
-    .product{
-        width: 100%;
-    }
-
 }

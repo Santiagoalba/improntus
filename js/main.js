@@ -35,10 +35,11 @@ var swiper2 = new Swiper(".mySwiper", {
       slidesPerView: 2,
       spaceBetween: 60,
     },
+
     // when window width is >= 640px
-    1100: {
+    1200: {
       slidesPerView: 5,
-      spaceBetween: 60,
+      spaceBetween: 30,
     },
   },
 });
