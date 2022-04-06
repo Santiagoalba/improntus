@@ -1,0 +1,144 @@
+header{
+    width: 100%;
+    display: flex;
+    // align-items: center;
+    flex-direction: column;
+
+    .header-top{
+        width: 65%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 20px 0;
+
+        .logo-container{
+            width: 30%;
+            display: flex;
+            align-items: center;
+
+            img{
+                width: 100%;
+                max-width: 150px;
+            }
+        }
+
+        .header-top-right{
+            display: flex;
+            align-items: center;
+
+            .input-container{
+                width: 300px;
+                position: relative;
+
+                img{
+                    position: absolute;
+                    top: 10px;
+                    right: 0px;
+                    width: 20px;
+                }
+
+                input{
+                    width: 100%;
+                    padding: 10px;
+                    background-color: $main-color;
+                    color: #adadad;
+                    border: none;
+                }
+            }
+          
+
+            .image-container{
+                width: 15px;
+                margin-left: 30px;
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            .search-mobile{
+                display: none;
+            }
+        }
+    }
+
+    .header-bottom{
+        width: 100%;
+        background-color: $main-color;
+        
+        .categories-list{
+            width: 65%;
+            margin: 0 auto;
+            display: flex;
+            list-style: none;
+            padding: 0;
+            color:  $dark-blue;
+            
+            li{
+                margin-right: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 770px) {
+
+    header {
+
+        padding: 15px 0;
+
+        .header-top {
+            width: 100%;
+
+            .logo-container {
+                margin-left: 15px;
+
+            }
+
+            .header-top-right {
+                margin-left: auto;
+                margin-right: 40px;
+                // width: 100%;
+
+                .input-container {
+                    display: none;
+                }
+
+                .shopping-cart {
+                    width: 30px;
+                    margin-left: 0;
+                }
+
+                .mobile-header-right {
+                    // width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .image-container {
+                        width: 30px;
+                        margin-right: 10px;
+                    }
+                    
+                    .search-mobile {
+                        display: block;
+                        margin-right: 20px;
+
+                        img {
+                            display: block;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        .header-bottom{
+            display: none;
+        }
+    }
+}

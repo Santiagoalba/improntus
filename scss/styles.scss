@@ -1,0 +1,13 @@
+//Base Styles
+@import 'modules/variables';
+@import 'modules/base';
+
+//Partials
+
+@import './partials/header';
+@import './partials/footer';
+
+//Pages
+@import './pages/home';
+@import './pages/categoryProducts';
+@import './pages/productDetails';

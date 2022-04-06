@@ -1,0 +1,223 @@
+.swiper{
+    margin-top: 2rem;
+    height: 500px;
+    padding: 0 50px;
+    margin-bottom: 20px;
+    
+    .swiper-wrapper{
+        
+        .swiper-slide{
+            background-color: $main-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
+    }
+    .swiper-button-prev {
+        color: black;
+    }
+
+    .swiper-button-next{
+        color: black;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+        
+        margin: 0 10px;
+    }
+    .swiper-pagination{
+        margin-bottom: 10px;
+
+
+        .swiper-pagination-bullet{
+            height: 20px;
+            width: 20px;
+            border: 1px solid black;
+            background: grey;
+            opacity: 1;
+            margin: 0 10px;
+        }
+    }
+}
+
+
+
+
+.hot-sellers{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+     
+    .hot-sellers-container{
+    }
+
+    h1{
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    .mySwiper{
+        height: 400px;
+        padding: 0 30px;
+        padding-bottom: 50px;
+        max-width: 1500px;
+        
+        .swiper-wrapper{
+            
+            .swiper-slide{
+                
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+
+                &-image {
+                    background-color: $main-color;
+                    width: 100%;
+                    height: 90%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                &-info{
+                    width: 100%;
+                    color: $dark-blue;
+                }
+            }
+        }
+
+        .swiper-button-next, .swiper-button-prev{
+            top: 40%;
+        }
+
+        .swiper-button-next{
+           right: 0;
+        }
+
+        .swiper-button-prev{
+           left: 0;
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+            bottom: -10px;
+        }
+    }
+
+
+    // ------------------ ESTILOS DE CARRUSEL HECHO A MANO -----------------------
+
+    .carousel {
+        width: 100%;
+        position: relative;
+        height: 400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1500px;
+    
+        .carousel-slide {
+            width: 100%;
+            max-width: 250px;
+            // margin: 0 30px;
+            padding: 20px 30px;
+    
+            .carousel-slide-img {
+                height: 100%;
+                background-color: gray;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .carousel-arrow {
+            width: 30px;
+    
+            img {
+                width: 100%;
+            }
+        }
+        
+        
+        .carousel-arrow-right {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: rotate(180deg);
+        }
+        
+        .carousel-arrow-left {
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+    }
+
+    // --------------------- FIN ESTILOS CARRUSEL A  MANO ---------------------------
+    
+    
+    
+
+    
+
+
+}
+
+@media screen and (max-width: 1250px) {
+
+    .hot-sellers{
+
+
+        .mySwiper {
+            padding:0;
+            padding-bottom: 50px;
+        }
+
+        .carousel {
+            justify-content: center;
+
+            .not-mobile{
+                display: none;
+            }
+            
+        
+            .carousel-slide {
+                
+        
+                .carousel-slide-img {
+                   
+                }
+            }
+            .carousel-arrow {
+      
+        
+                img {
+            
+                }
+            }
+            
+            
+            .carousel-arrow-right {
+            
+            }
+            
+            .carousel-arrow-left {
+              
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 770px) {
+
+    .swiper {
+        margin-top: 0;
+        max-height: 400px;
+    }
+}

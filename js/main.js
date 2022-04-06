@@ -32,12 +32,18 @@ var swiper2 = new Swiper(".mySwiper", {
     },
     // when window width is >= 480px
     640: {
-      slidesPerView: 2,
-      spaceBetween: 60,
+      slidesPerView: 3,
+      // spaceBetween: 60,
+      spaceBetween: 30,
+    },
+
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 30,
     },
 
     // when window width is >= 640px
-    1200: {
+    1400: {
       slidesPerView: 5,
       spaceBetween: 30,
     },

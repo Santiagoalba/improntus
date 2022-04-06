@@ -1,0 +1,132 @@
+.products {
+    width: 45%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+
+    h1{
+        margin: 40px 0;
+        color: $dark-blue;
+        font-size: 26px;
+    }
+
+    .products-cards-section{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+        .product-card{
+
+            max-width: 200px;
+            min-width: 150px;
+            
+            .product-image {
+                background-color: $main-color;
+                height: 250px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .heart-container {
+                    width: 14px;
+                    position: absolute;
+                    right: 8px;
+                    top: 8px;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                .image-container {
+                   
+                }
+            }
+
+            .product-info {
+                margin: 0;
+                color: $dark-blue;
+                padding-top: 10px;
+
+                p {
+                    margin: 0;
+                    margin-bottom: 5px;
+                    font-size: 17px;
+                }
+
+            }
+
+            .add-to-cart-button {
+                width: 100%;
+                background-color: $dark-blue;
+                color: #adadad;
+                border: none;
+                font-size: 14px;
+                padding: 8px 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    
+    .products {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 3rem;
+
+        h1{
+            display: none;
+        }
+
+        .products-cards-section{
+            grid-template-columns: repeat(2, 1fr);
+
+            .not-mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 770px) {
+
+    .products {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin-top: 3rem;
+        margin: 20px auto;
+        
+        h1{
+            display: none;
+        }
+        
+        .products-cards-section{
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0 20px;
+            width: 100%;
+            
+            
+
+            .product-card{
+                width: 100%;
+                max-width: none;
+                min-width: 0;
+
+                .product-info{
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+            }
+
+            .not-mobile {
+                display: none;
+            }
+        }
+    }
+}
