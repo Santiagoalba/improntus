@@ -11,9 +11,9 @@ const swiper = new Swiper(".swiper", {
 
 var swiper2 = new Swiper(".mySwiper", {
   slidesPerView: 5,
-  spaceBetween: 30,
+  spaceBetween: 60,
   slidesPerGroup: 5,
-  loop: true,
+  loop: false,
   loopFillGroupWithBlank: true,
   pagination: {
     el: ".swiper-pagination",
@@ -22,5 +22,23 @@ var swiper2 = new Swiper(".mySwiper", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    // when window width is >= 480px
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 60,
+    },
+    // when window width is >= 640px
+    1100: {
+      slidesPerView: 5,
+      spaceBetween: 60,
+    },
   },
 });
