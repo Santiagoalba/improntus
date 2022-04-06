@@ -113,51 +113,70 @@
 
     // ------------------ ESTILOS DE CARRUSEL HECHO A MANO -----------------------
 
-    .carousel {
-        width: 100%;
-        position: relative;
-        height: 400px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        max-width: 1500px;
+    // .carousel {
+    //     width: 100%;
+    //     position: relative;
+    //     height: 400px;
+    //     margin: 0 auto;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     max-width: 1500px;
+    //     padding: 30px 0;
     
-        .carousel-slide {
-            width: 100%;
-            max-width: 250px;
-            // margin: 0 30px;
-            padding: 20px 30px;
+    //     .carousel-slide {
+    //         width: 90%;
+    //         max-width: 250px;
+    //         // margin: 0 30px;
+    //         padding: 0 30px;
+    //         height: 90%;
     
-            .carousel-slide-img {
-                height: 100%;
-                background-color: gray;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-        }
-        .carousel-arrow {
-            width: 30px;
+    //         .carousel-slide-img {
+    //             height: 100%;
+    //             background-color: gray;
+    //             display: flex;
+    //             align-items: center;
+    //             justify-content: center;
+    //         }
+    //     }
+    //     .carousel-arrow {
+    //         width: 30px;
     
-            img {
-                width: 100%;
-            }
-        }
+    //         img {
+    //             width: 100%;
+    //         }
+    //     }
         
         
-        .carousel-arrow-right {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: rotate(180deg);
-        }
+    //     .carousel-arrow-right {
+    //         position: absolute;
+    //         right: 0;
+    //         top: 50%;
+    //         transform: rotate(180deg);
+    //     }
         
-        .carousel-arrow-left {
-            position: absolute;
-            left: 0;
-            top: 50%;
-        }
-    }
+    //     .carousel-arrow-left {
+    //         position: absolute;
+    //         left: 0;
+    //         top: 50%;
+    //     }
+
+    //     .carousel-bullet-container {
+    //         position: absolute;
+    //         left: 45%;
+    //         bottom: 0;
+    //         display: flex;
+
+    //         .carousel-bullet {
+    //             height: 20px;
+    //             width: 20px;
+    //             border: 1px solid black;
+    //             background: grey;
+    //             opacity: 1;
+    //             margin: 0 10px;
+    //             border-radius: 50%;
+    //         }
+    //     }
+    // }
 
     // --------------------- FIN ESTILOS CARRUSEL A  MANO ---------------------------
     
